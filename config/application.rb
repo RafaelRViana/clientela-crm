@@ -2,9 +2,9 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
-# If you have a Gemfile, require the gems listed there, including any gems
-# you've limited to :test, :development, or :production.
-Bundler.require(:default, Rails.env) if defined?(Bundler)
+if defined?(Bundler)
+  Bundler.require *Rails.groups(:assets => %w(development test))
+end
 
 module ClientelaMysql
   class Application < Rails::Application
@@ -23,11 +23,7 @@ module ClientelaMysql
       # Bundler.require(:default, :assets, Rails.env)
     end
 
-    # Enable the asset pipeline
-    config.assets.enabled = true
-
-    # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
+    config.assets.initialize_on_precompile = false
 
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
@@ -44,11 +40,6 @@ module ClientelaMysql
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :pt_BR
 
-    # JavaScript files you want as :defaults (application.js is always included).
-    # config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
-    config.action_view.javascript_expansions[:defaults] = %w(jquery-1.4.4.min jquery-ui-1.8.5.custom.min.js jquery.ui.datepicker-pt-BR jquery.fancybox-1.3.4.pack task custom.jquery jquery.form-defaults GrowingInput TextboxList TextboxList.Autocomplete rails autocomplete-rails form contact company deal note fact feedback)
-    config.action_view.stylesheet_expansions[:application] = %w(vendor/fancybox vendor/jquery-ui vendor/textbox-taglist)
-
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
@@ -56,7 +47,13 @@ module ClientelaMysql
     config.filter_parameters += [:password]
 
     config.active_record.observers = :task_observer, :note_observer, :deal_observer
-    
+
+    # Enable the asset pipeline
+    config.assets.enabled = true
+
+    # Version of your assets, change this if you want to expire all your assets
+    config.assets.version = '1.0'
+
     config.to_prepare do
       Devise::Mailer.layout "mailer"
     end
