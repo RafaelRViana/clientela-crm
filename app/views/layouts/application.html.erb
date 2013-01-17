@@ -4,9 +4,7 @@
     <meta charset="utf-8" />
     <title>Clientela</title>
     <link href='/favicon.ico' rel='shortcut icon'>
-    <% color = "green" %>
     <%= stylesheet_link_tag :application, :type => nil, :media => "all" %>
-    <%= javascript_include_tag :application, :type => nil %>
     <%= csrf_meta_tag %>
 
     <!--[if lt IE 9]>
@@ -99,30 +97,10 @@
           <p>
             <%= link_to "Site", "http://clientela.com.br" %> |
             <%= link_to 'Termos de uso', 'http://clientela.com.br/termos' %> |
-            <%= link_to 'Documentação da API', support_api_url %> |
-            <a href="#" onClick="script: Zenbox.show(); return false;"><%= t('.support') %></a>
+            <%= link_to 'Documentação da API', support_api_url %>
           </p>
         </div>
     </div>
-    <%= render :partial => "layouts/snap_engage" %>
-    <script type="text/javascript" src="//asset0.zendesk.com/external/zenbox/zenbox-2.0.js"></script>
-    <style type="text/css" media="screen, projection">
-      @import url(//asset0.zendesk.com/external/zenbox/zenbox-2.0.css);
-    </style>
-    <script type="text/javascript">
-      if (typeof(Zenbox) !== "undefined") {
-        Zenbox.init({
-          dropboxID:   "12026",
-          url:         "https://clientela.zendesk.com",
-          tabID:       "support",
-          tabColor:    "black",
-          tabPosition: "Left",
-          hide_tab:    true,
-          requester_email: "<%= current_user.email %>",
-          requester_name: "<%= current_user.name %>",
-          closeText: "Fechar"
-        });
-      }
-    </script>
+    <%= javascript_include_tag :application, :type => nil %>
   </body>
 </html>
