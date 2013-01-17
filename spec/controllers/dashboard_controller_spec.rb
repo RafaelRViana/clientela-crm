@@ -16,7 +16,7 @@ describe DashboardController do
   describe "GET show" do
     it "should assign @activities" do
       get :show
-      assigns(:activities).should == Activity.latest
+      assigns(:activities).to_a.should == Activity.latest.to_a
     end
 
     it "render template" do
