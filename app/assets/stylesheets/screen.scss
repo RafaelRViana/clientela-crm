@@ -30,13 +30,13 @@ div#header {
       padding: 5px 5px 5px 30px;
       font-size: 1.2em;
       @include border-radius(4px, 4px);
-      background: #fff url('/images/icon-search.png') no-repeat 6px 3px;
+      background: #fff url('/assets/icon-search.png') no-repeat 6px 3px;
     }
 
     input[type=text]:focus,
     input[type=text].focus {
       border: 1px solid #FF9C00;
-      background: #fff url('/images/icon-search.png') no-repeat 6px -27px;
+      background: #fff url('/assets/icon-search.png') no-repeat 6px -27px;
     }
   }
 
@@ -75,13 +75,13 @@ p.notification{
   }
 
   a#aprovo{
-    background: url('/images/accept.png') no-repeat 0 4px;
+    background: url('/assets/accept.png') no-repeat 0 4px;
     padding: 10px;
     margin-left:  5px;
   }
 
   a#desaprovo{
-    background: url('/images/reject.png') no-repeat 0 4px;
+    background: url('/assets/reject.png') no-repeat 0 4px;
     padding: 10px;
     margin-left:  5px;
   }
@@ -98,7 +98,7 @@ p.notification{
   }
 
   &.error {
-    background: #ffcece url('/images/icons/exclamation.png') 7px 8px no-repeat;
+    background: #ffcece url('/assets/icons/exclamation.png') 7px 8px no-repeat;
     border-color: #df8f8f !important;
     color: #665252;
   }
@@ -132,59 +132,59 @@ div#left-sidebar {
       padding-left: 32px;
 
       &.dashboard {
-        background: transparent url(/images/menu-icons.png) no-repeat 12px 13px;
+        background: transparent url(/assets/menu-icons.png) no-repeat 12px 13px;
       }
 
       &.dashboard.current {
-        background: #E5E3DE url(/images/menu-icons.png) no-repeat 12px -17px;
+        background: #E5E3DE url(/assets/menu-icons.png) no-repeat 12px -17px;
       }
 
       &.tasks {
-        background: transparent url(/images/menu-icons.png) no-repeat 12px -166px;
+        background: transparent url(/assets/menu-icons.png) no-repeat 12px -166px;
       }
 
       &.tasks.current {
-        background: #E5E3DE url(/images/menu-icons.png) no-repeat 12px -196px;
+        background: #E5E3DE url(/assets/menu-icons.png) no-repeat 12px -196px;
       }
 
       &.contacts {
-        background: transparent url(/images/menu-icons.png) no-repeat 13px -46px;
+        background: transparent url(/assets/menu-icons.png) no-repeat 13px -46px;
       }
 
       &.contacts.current {
-        background: #E5E3DE url(/images/menu-icons.png) no-repeat 13px -76px;
+        background: #E5E3DE url(/assets/menu-icons.png) no-repeat 13px -76px;
       }
 
       &.facts {
-        background: transparent url(/images/menu-icons.png) no-repeat 12px -226px;
+        background: transparent url(/assets/menu-icons.png) no-repeat 12px -226px;
       }
 
       &.facts.current {
-        background: #E5E3DE url(/images/menu-icons.png) no-repeat 12px -256px;
+        background: #E5E3DE url(/assets/menu-icons.png) no-repeat 12px -256px;
       }
 
       &.deals {
-        background: transparent url(/images/menu-icons.png) no-repeat 12px -106px;
+        background: transparent url(/assets/menu-icons.png) no-repeat 12px -106px;
       }
 
       &.deals.current {
-        background: #E5E3DE url(/images/menu-icons.png) no-repeat 12px -136px;
+        background: #E5E3DE url(/assets/menu-icons.png) no-repeat 12px -136px;
       }
 
       &.companies {
-        background: transparent url(/images/menu-icons.png) no-repeat 12px -349px;
+        background: transparent url(/assets/menu-icons.png) no-repeat 12px -349px;
       }
 
       &.companies.current {
-        background: #E5E3DE url(/images/menu-icons.png) no-repeat 12px -379px;
+        background: #E5E3DE url(/assets/menu-icons.png) no-repeat 12px -379px;
       }
 
       &.reports {
-        background: transparent url(/images/menu-icons.png) no-repeat 12px -286px;
+        background: transparent url(/assets/menu-icons.png) no-repeat 12px -286px;
       }
 
       &.reports.current {
-        background: #E5E3DE url(/images/menu-icons.png) no-repeat 12px -316px;
+        background: #E5E3DE url(/assets/menu-icons.png) no-repeat 12px -316px;
       }
 
       a {
@@ -202,7 +202,7 @@ div#left-sidebar {
 
         span {
           padding-left: 16px;
-          background: transparent url(/images/icon-add.png) no-repeat 0 0;
+          background: transparent url(/assets/icon-add.png) no-repeat 0 0;
         }
       }
 
@@ -217,10 +217,10 @@ div#left-sidebar {
   div.favorites {
     ul {
       li {
-        background: transparent url(/images/menu-icons.png) no-repeat 12px -416px;
+        background: transparent url(/assets/menu-icons.png) no-repeat 12px -416px;
 
         &.current {
-          background: #E5E3DE url(/images/menu-icons.png) no-repeat 12px -447px;
+          background: #E5E3DE url(/assets/menu-icons.png) no-repeat 12px -447px;
         }
 
         a {
@@ -372,7 +372,7 @@ div#main{
         margin: 5px 20px 0 0;
         padding: 3px 3px 3px 20px;
         color: #555;
-        background: transparent url(/images/menu-icons.png) no-repeat 0 -174px;
+        background: transparent url(/assets/menu-icons.png) no-repeat 0 -174px;
         text-decoration: none;
         text-shadow: 0px 2px 0 #fff;
         font-size: .9em;
@@ -381,7 +381,7 @@ div#main{
 
       #all-tasks:hover {
         color: #000;
-        background: transparent url(/images/menu-icons.png) no-repeat 0 -204px;
+        background: transparent url(/assets/menu-icons.png) no-repeat 0 -204px;
       }
 
       nav {
@@ -414,19 +414,19 @@ div#main{
               text-indent: -9999px;
 
               &#prev-weeks {
-                background: transparent url(/images/nav-arrows.png) no-repeat 0 0;
+                background: transparent url(/assets/nav-arrows.png) no-repeat 0 0;
               }
 
               &#prev-weeks:hover {
-                background: transparent url(/images/nav-arrows.png) no-repeat 0 -20px;
+                background: transparent url(/assets/nav-arrows.png) no-repeat 0 -20px;
               }
 
               &#next-weeks {
-                background: transparent url(/images/nav-arrows.png) no-repeat -18px 0;
+                background: transparent url(/assets/nav-arrows.png) no-repeat -18px 0;
               }
 
               &#next-weeks:hover {
-                background: transparent url(/images/nav-arrows.png) no-repeat -18px -20px;
+                background: transparent url(/assets/nav-arrows.png) no-repeat -18px -20px;
               }
             }
           }
@@ -580,7 +580,7 @@ div#main{
 
         h2 {
           span {
-            background: transparent url(/images/menu-icons.png) no-repeat 0 -115px;
+            background: transparent url(/assets/menu-icons.png) no-repeat 0 -115px;
           }
         }
 
@@ -633,7 +633,7 @@ div#main{
         float: right;
         h2 {
           span {
-            background: transparent url(/images/menu-icons.png) no-repeat 0 -295px;
+            background: transparent url(/assets/menu-icons.png) no-repeat 0 -295px;
           }
         }
       }
