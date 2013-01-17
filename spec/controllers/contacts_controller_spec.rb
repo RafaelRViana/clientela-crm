@@ -20,7 +20,7 @@ describe ContactsController do
         response.body.should == "[]"
       end
     end
-    
+
     describe "GET autocomplete_contact_title" do
       it "should query Contact and render json" do
         Contact.should_receive(:autocomplete_title).with("don").and_return([])
@@ -45,17 +45,17 @@ describe ContactsController do
       @tag = FactoryGirl.create(:tag_owner_quentin, tag_id: owner.id, taggable_id: @contact.id)
       @contact.permissions.create!(:group => @group)
     end
-    
+
     it "assigns all contacts as @contacts" do
       get :index
-      assigns(:contacts).size.should == 2
+      assigns(:contacts).order(:id).should eq([@contact_joseph, @contact])
     end
-    
+
     it "should filter by initials" do
       get :index, :initial => "Jo"
       assigns(:contacts).should eq([@contact_joseph])
     end
-    
+
     it "should filter by tag" do
       ActsAsTaggableOn::Tag.should_receive(:find).with("44-customer").and_return('tag-mock')
       Contact.should_receive(:tagged_with).with('tag-mock') { [mock_contact] }
