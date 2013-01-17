@@ -1,6 +1,5 @@
 source 'http://rubygems.org'
 
-gem 'thin', '1.3.1'
 gem 'rake', '0.8.7'
 gem 'rails',  '3.1.10'
 gem 'pg', '0.14.1'
@@ -25,6 +24,7 @@ gem 'faker', '1.0.1'
 gem 'aws-sdk', '1.6.9'
 gem 'thinking-sphinx', '2.0.11'
 gem 'flying-sphinx',   '0.8.4'
+gem 'thin', '1.5.0'
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
