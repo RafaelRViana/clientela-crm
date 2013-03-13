@@ -50,5 +50,5 @@ ClientelaMysql::Application.configure do
   config.action_mailer.delivery_method   = :postmark
   config.action_mailer.postmark_settings = { :api_key => "7db9c717-65a6-4c57-8a09-e00a614b55d5" }
 
-  config.action_mailer.default_url_options = { :host => 'clientelacrm.com.br' }
+  config.action_mailer.default_url_options = { :host => 'bps-crm.herokuapp.com' }
 end
